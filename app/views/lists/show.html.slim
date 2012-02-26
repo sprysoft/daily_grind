@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong User:
+  = @list.user_id
+p
+  strong Name:
+  = @list.name
+p
+  strong Description:
+  = @list.description
+
+= link_to 'Edit', edit_list_path(@list)
+'|
+= link_to 'Back', lists_path
