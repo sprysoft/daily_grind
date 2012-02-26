@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong List:
+  = @task.list_id
+p
+  strong User:
+  = @task.user_id
+p
+  strong Name:
+  = @task.name
+p
+  strong Description:
+  = @task.description
+p
+  strong Due at:
+  = @task.due_at
+p
+  strong Completed at:
+  = @task.completed_at
+
+= link_to 'Edit', edit_task_path(@task)
+'|
+= link_to 'Back', tasks_path

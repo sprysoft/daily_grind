@@ -1,4 +1,6 @@
 DailyGrind::Application.routes.draw do
+  resources :tasks
+
   resources :lists
 
   devise_for :users
