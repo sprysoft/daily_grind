@@ -1,2 +1,81 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+## Tables
+
+users
+- id
+- email
+- encrypted_password
+- reset_password_token
+- reset_password_sent_at
+- remember_created_at
+- sign_in_count
+- current_sign_in_at
+- last_sign_in_at
+- current_sign_in_ip
+- last_sign_in_ip
+- created_at
+- updated_at
+
+lists
+- id
+- name
+- description
+- user_id
+- created_at
+- updated_at
+
+tasks
+- id
+- list_id
+- user_id
+- name
+- due_at
+- completed_at
+- created_at
+- updated_at
+
+
+## Application description
+
+A simple task management application allowing you to: 
+  - list tasks by:
+    - Weekly view {today, tomorrow, specified week}
+    - By lists {unlisted tasks, listed tasks}
+  - create, update, delete tasks
+  - create, update, delete lists
+
+
+## Caching Strategies
+
+- Introduction
+  - Brief discussion of modern web applications
+    - Importance of speed
+    - Brief overview of 2 approaches
+
+- HTML5 Cache Manifest
+  - Downloadable assets
+    - Size of assets allowed
+    - Network traffic
+    - JavaScript API
+    - Offline
+    - Debugging reports with Firebug + WebKit console
+    - Discuss benefits and negatives of approach
+
+- PJax
+
+- Memcached Server
+  - Discussion of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
