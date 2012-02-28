@@ -52,29 +52,15 @@ A simple task management application allowing you to:
     - Brief overview of 2 approaches
 
 - HTML5 Cache Manifest
-  - Downloadable assets
-    - Size of assets allowed
-    - Network traffic
-    - JavaScript API
-    - Offline
-    - Debugging reports with Firebug + WebKit console
-    - Discuss benefits and negatives of approach
+  - Size of assets allowed
+  - Network traffic
+  - JavaScript API
+  - Offline
+  - Debugging reports with Firebug + WebKit console
+  - Discuss benefits and negatives of approach
 
-- PJax
-
-- Memcached Server
-  - Discussion of 
-
-
-
-
-
-
-
-
-
-
-
+- Fragment caching
+  - Installation of Memcached server
 
 
 
