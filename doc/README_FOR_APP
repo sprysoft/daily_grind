@@ -39,7 +39,15 @@ tasks
 A simple task management application allowing you to: 
   - list tasks by:
     - Weekly view {today, tomorrow, specified week}
+    /weekly/{today|default,tomorrow}
+
     - By lists {unlisted tasks, listed tasks}
+    /lists/{list_name}
+
+    - List all tasks
+    /tasks/
+
+
   - create, update, delete tasks
   - create, update, delete lists
 
@@ -65,3 +73,43 @@ A simple task management application allowing you to:
 
 
 
+- notes
+  - page responsiveness
+    - measure
+      - firebug
+        - yslow
+      - Webkit console
+    - improve
+      - browser load time
+        - combine js and CSS files
+        - minify js and CSS
+          - compmresses by removing linespaces and spaces
+          - CDN
+
+  - page caching
+    - when every user sees the same content
+    - when the data within that page is unlikely to change very often
+  
+  - fragment caching
+    - brake the page down into small fragments
+    - DB hits fragment_exists?(fragement_name)
+    - "There are only two hard things in Computer Science: cache invalidation and naming things" - Phil Karlton
+
+  - Memcached
+    - key value based system
+    - cache expiration
+    - stack based system ( first in, first out )
+    - intelligent key names "tasks/#{id}/#{updated_at.to_s(:number)}"
+    - when to use
+      - action and fragment caching
+      - when content is different for any user ( avoid database hits )
+  
+  - client side caching
+    - 3 headers ( max-age, etag, last_modified )
+      - These can be used in-joint with a reverse proxy cache
+  
+  - reverse proxy cache
+
+  - load testing
+    - load testing is the process of putting demand on a system or device and measuring its response
+    
